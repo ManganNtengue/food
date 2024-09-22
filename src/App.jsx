@@ -29,7 +29,7 @@ function App() {
           element: <LoginPage />,
         },
         {
-          path: "/order/:name",
+          path: "/order/:userName",
           element: <OrderPage />,
         },
       ],
@@ -61,7 +61,7 @@ export default App;
 // import OrderPage from "./components/pages/OrderPage";
 
 // function App() {
-//   const [name, setName] = useState("");
+//   const [userName, setUserName] = useState("");
 //   const router = createBrowserRouter([
 //     {
 //       path: "/",
@@ -75,11 +75,11 @@ export default App;
 //       children: [
 //         {
 //           index: true,
-//           element: <LoginPage name={name} setName={setName} />,
+//           element: <LoginPage userName={userName} setUserName={setUserName} />,
 //         },
 //         {
-//           path: "/order/" + name,
-//           element: <OrderPage name={name} setName={setName} />,
+//           path: "/order/" + userName,
+//           element: <OrderPage userName={userName} setUserName={setUserName} />,
 //         },
 //       ],
 //     },

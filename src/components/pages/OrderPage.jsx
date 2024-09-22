@@ -2,10 +2,10 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 function OrderPage() {
-  const { name } = useParams();
+  const { userName } = useParams();
   return (
     <div>
-      <h1>{`Bonjour ${name}`}</h1>
+      <h1>{`Bonjour ${userName}`}</h1>
       <br />
       <Link to="/">
         <button>Déconnexion</button>
@@ -20,7 +20,7 @@ export default OrderPage;
 // import React from "react";
 // import { useNavigate } from "react-router-dom";
 
-// function OrderPage({ name, setName }) {
+// function OrderPage({ userName, setUserName }) {
 //   const navigate = useNavigate();
 //   const handleClick = () => {
 //     setName("");
@@ -29,7 +29,7 @@ export default OrderPage;
 
 //   return (
 //     <div>
-//       <h1>{`Bonjour ${name}`}</h1>
+//       <h1>{`Bonjour ${userName}`}</h1>
 //       <br />
 //       <button onClick={handleClick}>Déconnexion</button>
 //     </div>

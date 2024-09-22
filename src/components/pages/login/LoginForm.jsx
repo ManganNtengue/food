@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
-  const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/order/" + name);
+    navigate("/order/" + userName);
   };
   const handleChange = (e) => {
-    setName(e.target.value);
+    setUserName(e.target.value);
   };
   return (
     <div>
@@ -20,7 +20,7 @@ function LoginForm() {
       <form action="submit" onSubmit={handleSubmit}>
         <input
           type="text"
-          value={name}
+          value={userName}
           onChange={(e) => handleChange(e)}
           placeholder="Entrez votre prenom"
           required
@@ -37,14 +37,14 @@ export default LoginForm;
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
-// function LoginForm({ name, setName }) {
+// function LoginForm({ userName, setUserName }) {
 //   const navigate = useNavigate();
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
-//     navigate("/order/" + name);
+//     navigate("/order/" + userName);
 //   };
 //   const handleChange = (e) => {
-//     setName(e.target.value);
+//     setUserName(e.target.value);
 //   };
 //   return (
 //     <div>
@@ -55,7 +55,7 @@ export default LoginForm;
 //       <form action="submit" onSubmit={handleSubmit}>
 //         <input
 //           type="text"
-//           value={name}
+//           value={userName}
 //           onChange={(e) => handleChange(e)}
 //           placeholder="Entrez votre prenom"
 //           required
