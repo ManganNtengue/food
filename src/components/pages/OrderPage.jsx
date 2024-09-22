@@ -1,11 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function OrderPage({ name }) {
+function OrderPage({ name, setName }) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    setName("");
+    navigate("/");
+  };
+
   return (
     <div>
       <h1>{`Bonjour ${name}`}</h1>
       <br />
-      <button>Déconnexion</button>
+      <button onClick={handleClick}>Déconnexion</button>
     </div>
   );
 }
