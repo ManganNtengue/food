@@ -1,12 +1,26 @@
 import React from "react";
 import LoginForm from "./LoginForm";
 
-function LoginPage() {
+function LoginPage({ name, setName }) {
   return (
     <div>
-      <LoginForm />
+      <LoginForm name={name} setName={setName} />
     </div>
   );
 }
 
 export default LoginPage;
+
+//*******OPTION 2 */
+// import React from "react";
+// import LoginForm from "./LoginForm";
+
+// function LoginPage({ name, setName }) {
+//   return (
+//     <div>
+//       <LoginForm name={name} setName={setName} />
+//     </div>
+//   );
+// }
+
+// export default LoginPage;
